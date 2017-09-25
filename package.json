@@ -1,5 +1,5 @@
 {
-  "name": "@ajtii/gulp-file-reader",
+  "name": "gulp-file-reader",
   "version": "1.0.0",
   "description": "Gulp plugin to read file and save its content in Vinyl#contents property. See https://github.com/gulpjs/vinyl for more details",
   "main": "index.js",
