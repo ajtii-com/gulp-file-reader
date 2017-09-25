@@ -1,0 +1,5 @@
+.editorconfig
+.gitignore
+.npmignore
+index.test.js
+package-lock.json
