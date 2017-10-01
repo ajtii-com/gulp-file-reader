@@ -2,4 +2,5 @@
 .gitignore
 .npmignore
 index.test.js
+npm-debug.log
 package-lock.json
