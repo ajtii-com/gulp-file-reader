@@ -3,6 +3,14 @@
 Gulp plugin to read file and save its content in **Vinyl#contents** property.
 See [vinyl](https://github.com/gulpjs/vinyl) package for more details
 
+## Installation
+
+```
+npm install --save-dev gulp-file-reader
+```
+
+## Load
+
 ```js
 const read = require('gulp-file-reader');
 ```
