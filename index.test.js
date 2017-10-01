@@ -13,7 +13,7 @@ const expect = chai.expect;
 describe('gulp-file-reader', function () {
   it('should read the file and put its content in Vinyl#contents property as string when no arguments passed',
       function (done) {
-  vfs.src('LICENSE')
+  vfs.src('LICENSE', { read: false })
       .pipe(read())
       .pipe(through.obj(function (file, encoding, done2) {
         expect(file.contents).to.be.an.instanceOf(Buffer);
@@ -26,7 +26,7 @@ describe('gulp-file-reader', function () {
 
   it('should read the file and put its content in Vinyl#contents property as string when true passed',
       function (done) {
-  vfs.src('LICENSE')
+  vfs.src('LICENSE', { read: false })
       .pipe(read(true))
       .pipe(through.obj(function (file, encoding, done2) {
         expect(file.contents).to.be.an.instanceOf(Buffer);
@@ -39,7 +39,7 @@ describe('gulp-file-reader', function () {
 
   it('should put the file stream in Vinyl#contents property when false passed',
       function (done) {
-    vfs.src('LICENSE')
+    vfs.src('LICENSE', { read: false })
         .pipe(read(false))
         .pipe(through.obj(function (file, encoding, done2) {
           expect(file.contents).to.be.an('object');
