@@ -16,7 +16,7 @@ describe('gulp-file-reader', function () {
   vfs.src('LICENSE', { read: false })
       .pipe(read())
       .pipe(through.obj(function (file, encoding, done2) {
-        expect(file.contents).to.be.an.instanceOf(Buffer);
+        expect(file.isBuffer()).to.equal(true);
         expect(file.contents.toString()).to.startWith("MIT License");
         done2();
       }, function () {
@@ -29,7 +29,7 @@ describe('gulp-file-reader', function () {
   vfs.src('LICENSE', { read: false })
       .pipe(read(true))
       .pipe(through.obj(function (file, encoding, done2) {
-        expect(file.contents).to.be.an.instanceOf(Buffer);
+        expect(file.isBuffer()).to.equal(true);
         expect(file.contents.toString()).to.startWith("MIT License");
         done2();
       }, function () {
@@ -42,8 +42,7 @@ describe('gulp-file-reader', function () {
     vfs.src('LICENSE', { read: false })
         .pipe(read(false))
         .pipe(through.obj(function (file, encoding, done2) {
-          expect(file.contents).to.be.an('object');
-          expect(file.contents.read).to.be.a('function');
+          expect(file.isStream()).to.equal(true);
           done2();
         }, function () {
           done();
