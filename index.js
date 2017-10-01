@@ -1,6 +1,6 @@
 'use strict';
 
-const getContents = require('vinyl-fs/lib/src/getContents');
+var getContents = require('vinyl-fs/lib/src/getContents');
 
 module.exports = function (buffer) {
   // Read the file (default) or just put stream in Vinyl#contents property
