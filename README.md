@@ -9,7 +9,7 @@ const read = require('gulp-file-reader');
 
 ## read([buffer])
 
-* **buffer** *= true*  
+* **buffer**: boolean *= true*  
 If *true* then puts **content** in *Vinyl#contents* property otherwise
 a **stream**
 
@@ -25,7 +25,7 @@ const read = require('gulp-file-reader');
   // Get all .js files but do not read them yet
   return gulp.src('src/**/*.js', { read: false })
       // Pass through just changed files
-      .pipe(newer('dist'))
+      .pipe(newer('dist/'))
       // Load their content into Vinyl#contents property
       .pipe(read())
       ...
