@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/ajtii-com/gulp-file-reader#readme",
   "dependencies": {
-    "vinyl-fs": "0.3.1 - 2"
+    "vinyl-fs": "0.3.1 - 2.4"
   },
   "devDependencies": {
     "chai": "^4.1.2",
