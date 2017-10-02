@@ -1,7 +1,7 @@
 {
   "name": "gulp-file-reader",
-  "version": "1.0.3",
-  "description": "Gulp plugin to read file and save its content in Vinyl#contents property. See https://github.com/gulpjs/vinyl for more details",
+  "version": "1.1.0",
+  "description": "Gulp plugin to read file and save its content in Vinyl#contents property for further processing by remaining pipelined gulp plugins. See https://github.com/gulpjs/vinyl for more details",
   "main": "index.js",
   "scripts": {
     "test": "mocha index.test.js"
@@ -15,7 +15,9 @@
     "file",
     "reader",
     "loader",
-    "content"
+    "getter",
+    "content",
+    "stream"
   ],
   "author": "Ajtii Team <ajtii.com@gmail.com>",
   "license": "MIT",
@@ -24,6 +26,7 @@
   },
   "homepage": "https://github.com/ajtii-com/gulp-file-reader#readme",
   "dependencies": {
+    "gulp-util": "2.2.17 - 3.0",
     "vinyl-fs": "0.3.1 - 2.4"
   },
   "devDependencies": {
@@ -36,6 +39,6 @@
     "David Bojnansky <david.bojnansky@gmail.com>"
   ],
   "engines": {
-    "node": ">= 0.10"
+    "node": ">=0.10"
   }
 }

@@ -1,6 +1,7 @@
 # gulp-file-reader
 
-Gulp plugin to read file and save its content in **Vinyl#contents** property.
+Gulp plugin to read file and save its content in **Vinyl#contents** property
+for further processing by remaining pipelined gulp plugins.
 See [vinyl](https://github.com/gulpjs/vinyl) package for more details
 
 ## Installation
@@ -34,6 +35,7 @@ const read = require('gulp-file-reader');
   return gulp.src('src/**/*.js', { read: false })
       // Pass through just changed files
       .pipe(newer('dist/'))
+      // Read them NOW
       // Load their content into Vinyl#contents property
       .pipe(read())
       ...
@@ -51,9 +53,23 @@ releases this may change)*.
 Please, therefore refer your issues primarily to
 [vinyl-fs](https://github.com/gulpjs/vinyl-fs/issues)
 
+## Dependencies
+
+There are only two dependencies:
+[vinyl-fs](https://github.com/gulpjs/vinyl-fs) and
+[gulp-util](https://github.com/gulpjs/gulp-util)
+*([vinyl](https://github.com/gulpjs/vinyl) is part of the
+[vinyl-fs](https://github.com/gulpjs/vinyl-fs) package)*.
+Both are part of the
+[gulp](https://github.com/gulpjs/gulp) plugin so no package in addition
+
 ## Author
 
 Ajtii Team &lt;ajtii.com@gmail.com&gt;
+
+## More Plugins
+
+* Comming soon
 
 ## MIT License
 
